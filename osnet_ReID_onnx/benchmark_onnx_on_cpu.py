@@ -18,7 +18,6 @@ def resolve_input_shape(raw_shape, batch_size: int):
         if isinstance(dim, int) and dim > 0:
             resolved.append(dim)
         else:
-            # Typical ReID input fallback: (N, 3, 256, 128)
             fallback = [batch_size, 3, 256, 128]
             resolved.append(fallback[i] if i < len(fallback) else 1)
     return resolved
@@ -88,7 +87,7 @@ def benchmark_cpu_onnx(
     print(f"P50 latency     : {p50_ms:.3f} ms")
     print(f"P95 latency     : {p95_ms:.3f} ms")
     print(f"P99 latency     : {p99_ms:.3f} ms")
-    print(f"Throughput      : {throughput:.2f} samples/sec")
+    print(f"Throughput      : {throughput:.2f} FPS")
     print("=" * 42)
 
 
