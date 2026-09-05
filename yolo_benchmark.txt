@@ -1,0 +1,52 @@
+YOLO版本的部分
+[INFO] OpenVINO available devices: ['MYRIAD']
+[INFO] Using device: MYRIAD
+[INFO] Loading ReID model: osnet_ReID_onnx/yolo_person_detector/detector.xml
+[INFO] Input name : input
+[INFO] Input shape: [1, 3, 416, 416]
+[INFO] Input dtype: float32
+==================================================
+  NCS2 OpenVINO Benchmark  Multi Pipeline (Async * 3)
+==================================================
+  Total time       : 6.511 s
+  Average latency  : 97.268 ms
+  P50 latency      : 85.154 ms
+  P95 latency      : 114.467 ms
+  P99 latency      : 116.005 ms
+  Throughput       : 30.72 FPS
+==================================================
+==================================================
+  NCS2 OpenVINO Benchmark Multi Pipeline (Async * 2)
+==================================================
+  Total time       : 7.510 s
+  Average latency  : 75.026 ms
+  P50 latency      : 74.886 ms
+  P95 latency      : 76.118 ms
+  P99 latency      : 77.138 ms
+  Throughput       : 26.63 FPS
+==================================================
+==================================================
+  NCS2 OpenVINO Benchmark  Single Pipeline (Sync)
+==================================================
+  Total time       : 13.636 s
+  Average latency  : 68.174 ms
+  P50 latency      : 68.116 ms
+  P95 latency      : 68.545 ms
+  P99 latency      : 69.334 ms
+  Throughput       : 14.67 FPS
+==================================================
+
+[INFO] model=osnet_ReID_onnx/detector.onnx
+[INFO] provider=CPUExecutionProvider
+[INFO] input_name=input
+[INFO] input_shape=[1, 3, 256, 128]
+[INFO] intra_threads=4, inter_threads=1, warmup=10, iterations=100
+==========================================
+CPU ONNX Benchmark Result
+==========================================
+Average latency : 58.280 ms
+P50 latency     : 53.038 ms
+P95 latency     : 83.808 ms
+P99 latency     : 101.307 ms
+Throughput      : 17.16 FPS
+==========================================
